@@ -1,0 +1,19 @@
+{
+    "name": "mervy/sistema-de-rotas-simples-com-php",
+    "description": "Sistema de rotas simples com PHP - Clube Full-Stack https://www.youtube.com/watch?v=h7K-KUZ3Rvw",  
+    "license": "MIT", 
+    "authors": [
+        {
+            "name": "Rogério Soares",
+            "email": "rgrsoares@yahoo.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mervy\\SimpleRouteWithPhp\\": "app/"
+        }
+    },
+    "require": {
+        "php": ">=8.1"
+    }
+}
