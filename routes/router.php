@@ -26,7 +26,7 @@ function load(string $controller, string $action)
     }
 }
 
-$routes = [
+$router = [
     'GET' => [
         '/' => load('HomeController', 'index'),
         '/contact' => load('ContactController', 'index')

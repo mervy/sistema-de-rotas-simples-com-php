@@ -4,12 +4,12 @@ namespace Mervy\SimpleRouteWithPhp\controllers;
 
 class ContactController
 {
-    public function indsex()
+    public function index()
     {
         echo "index do ContactController<br>";
     }
 
-    public function stosre()
+    public function store()
     {
         echo "store do ContactController<br>";
     }
