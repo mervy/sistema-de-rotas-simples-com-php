@@ -20,7 +20,9 @@ function load(string $controller, string $action)
             throw new Exception("Action #{$action}# in controller #{$controller}# does not exist");
         }
 
-        $controllerInstance->$action();
+        //Com (object) $_REQUEST posso pegar query string
+        // como por exemplo ?id=4
+        $controllerInstance->$action((object) $_REQUEST);
     } catch (Exception $e) {
         echo $e->getMessage();
     }
@@ -28,10 +30,10 @@ function load(string $controller, string $action)
 
 $router = [
     'GET' => [
-        '/' => load('HomeController', 'index'),
-        '/contact' => load('ContactController', 'index')
+        '/' => fn()=>load('HomeController', 'index'),
+        '/contact' => fn()=>load('ContactController', 'index')
     ],
     'POST' => [
-        '/contact' => load('ContactController', 'store')
+        '/contact' => fn()=>load('ContactController', 'store')
     ]
 ];

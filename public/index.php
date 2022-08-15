@@ -18,12 +18,12 @@ try {
     }
 
     //Verifica se existe o path [/products se existe products]
-    if(!array_key_exists($uri, $router[$request])){
+    if (!array_key_exists($uri, $router[$request])) {
         throw new Exception("The route #{$uri}# does not exist");
     }
 
-    $router[$request][$uri];
-
+    $controller = $router[$request][$uri];
+    $controller();
 } catch (Exception $e) {
     echo $e->getMessage();
 }

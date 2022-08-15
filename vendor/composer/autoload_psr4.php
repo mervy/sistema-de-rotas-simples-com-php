@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Mervy\\SimpleRouteWithPhp\\' => array($baseDir . '/app'),
+    'League\\Plates\\' => array($vendorDir . '/league/plates/src'),
 );

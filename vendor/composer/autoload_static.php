@@ -11,12 +11,20 @@ class ComposerStaticInitee23ed7b4b3aa6918ee3258de2babffd
         array (
             'Mervy\\SimpleRouteWithPhp\\' => 25,
         ),
+        'L' => 
+        array (
+            'League\\Plates\\' => 14,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Mervy\\SimpleRouteWithPhp\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+        'League\\Plates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/plates/src',
         ),
     );
 
