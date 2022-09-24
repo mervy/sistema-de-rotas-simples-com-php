@@ -7,6 +7,7 @@ class ContactController
     public function index()
     {
         $data = [
+            'title' => 'Contact',
             'nome' => 'Rogério Soares',
             'email' => 'rgrsoares@yahoo.com.br'
         ];
@@ -15,11 +16,12 @@ class ContactController
 
     public function store($params)
     {
-        echo "store do ContactController<br>";
-        echo $params->email;
+        $data = [
+            'title' => 'Store do Contact',
+            'nome' => 'Rogério Soares',
+            'email' => 'rgrsoares@yahoo.com.br'
+        ];
 
-        echo "<pre>";
-        print_r($params);
-        echo "</pre>";
+        return Controller::view('contact', $data);
     }
 }

@@ -34,6 +34,7 @@ $router = [
         '/contact' => fn()=>load('ContactController', 'index')
     ],
     'POST' => [
-        '/contact' => fn()=>load('ContactController', 'store')
+        '/contact' => fn()=>load('ContactController', 'store'),
+        '/getParams' => fn()=>load('HomeController', 'getParams')
     ]
 ];

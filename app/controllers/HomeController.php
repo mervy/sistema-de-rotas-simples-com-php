@@ -7,11 +7,24 @@ class HomeController
     public function index($params)
     {
         $data = [
-            'nome'=> 'Rogério Soares',
-            'email' => 'rgrsoares@yahoo.com.br'
+            'title' => 'Página Inicial',
+            'name' => 'Rogério Soares',
+            'email' => 'rgrsoares@yahoo.com.br',
+            'params' => $params
         ];
-        
-        var_dump($params);
+
+
+        return Controller::view('home', $data);
+    }
+
+    public function getParams($params)
+    {
+        $data = [
+            'title' => 'Página Inicial',
+            'name' => 'Rogério Soares',
+            'email' => 'rgrsoares@yahoo.com.br',
+            'params' => $params
+        ];        
 
         return Controller::view('home', $data);
     }

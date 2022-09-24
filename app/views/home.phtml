@@ -1,0 +1,33 @@
+<?php $this->layout(
+    "master",
+    [
+        'title' => $title,
+        'name' => $name,
+        'e-mail' => $email,
+        'params' => $params
+    ]
+) ?>
+
+<div class="container py-5">
+    <h1>Method Index</h1>
+    <h2>Class HomeController</h2>
+    <p> Welcome <strong><?= $name ?></strong></p>
+    <p>Your contact is <strong><i><?= $email ?></i></strong></p>
+</div>
+<div class="container py-5 col-6">
+    <h2>Pegando parâmetros </h2>
+    <form action="/getParams?age=34&page=45&hash=djajrei34343jk3434k4j" method="post">
+        <label for="name" class="form-label">Name</label>
+        <input class="form-control" type="text" name="name" id="name">
+        <label for="password" class="form-label">Password</label>
+        <input class="form-control" type="password" name="pass" id="">
+        <button class="button bg-danger mt-3" type="submit">Enviar</button>
+    </form>
+</div>
+<div class="container py-5">
+    <h4>Get Params for form and url</h4>
+    <?php
+    foreach ($params as $param => $valueParam): ?>
+        <p><strong><?= $param ?></strong> = <?= $valueParam ?></p>
+    <?php endforeach ?>
+</div>
